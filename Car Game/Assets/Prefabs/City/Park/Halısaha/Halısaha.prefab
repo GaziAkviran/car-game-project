@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1454005204879772334}
   - component: {fileID: 1919812082045669024}
   - component: {fileID: 4520053326774394041}
+  - component: {fileID: 1896753685568751809}
+  - component: {fileID: 5143106259151142618}
   m_Layer: 0
   m_Name: "Hal\u0131saha"
   m_TagString: Untagged
@@ -136,8 +138,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 45.29933, y: 11.309945, z: 0.35222816}
-  m_Center: {x: -16.350922, y: 5.6549726, z: -9.711301}
+  m_Size: {x: 45.29933, y: 6.0963116, z: 0.35222816}
+  m_Center: {x: -16.350922, y: 8.261788, z: -9.711301}
 --- !u!65 &4520053326774394041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -151,3 +153,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 45.29933, y: 11.309945, z: 0.30057716}
   m_Center: {x: -16.350922, y: 5.6549726, z: 15.261861}
+--- !u!65 &1896753685568751809
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104511857032866613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.538063, y: 5.237445, z: 0.29720497}
+  m_Center: {x: -25.231556, y: 2.6187224, z: -9.738812}
+--- !u!65 &5143106259151142618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104511857032866613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.8415604, y: 5.237445, z: 0.29720497}
+  m_Center: {x: 2.4760475, y: 2.6187224, z: -9.738812}

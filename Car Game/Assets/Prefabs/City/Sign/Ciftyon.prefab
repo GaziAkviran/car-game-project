@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6801531685463137892}
   - component: {fileID: 6103121368629344994}
   - component: {fileID: 6103121368629344999}
+  - component: {fileID: 3243157269389303187}
   m_Layer: 0
   m_Name: Ciftyon
   m_TagString: Untagged
@@ -96,7 +97,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &6103121368629344999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,3 +111,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.64580107, y: 2.4489784, z: 0.11957127}
   m_Center: {x: 0, y: 1.2142987, z: -0.026598059}
+--- !u!114 &3243157269389303187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573613248293998185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b41139325e694aaf741e3d8bd76df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakable: {fileID: 1305081955594085379, guid: 2db87bf2bf2643448bbcd58923ede980,
+    type: 3}
+  breakEnergy: 55000

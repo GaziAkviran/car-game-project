@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7425847366096780401}
   - component: {fileID: 1531284004915957862}
   - component: {fileID: 1531284004915957861}
+  - component: {fileID: 1197229497335755531}
   m_Layer: 0
   m_Name: yayagecidi veiKasis
   m_TagString: Untagged
@@ -96,7 +97,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!65 &1531284004915957861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -110,3 +111,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.64580107, y: 2.4689784, z: 0.12098642}
   m_Center: {x: 0, y: 1.221039, z: -0.029454624}
+--- !u!114 &1197229497335755531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984464283698253096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3b41139325e694aaf741e3d8bd76df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakable: {fileID: 1572647085120065257, guid: 601c3df618b97db49864399391f5c3a2,
+    type: 3}
+  breakEnergy: 55000

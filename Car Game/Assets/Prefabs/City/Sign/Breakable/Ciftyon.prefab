@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1262937415067237310
+--- !u!1 &1305081955594085379
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8253042380281893528}
-  - component: {fileID: 3719358158451516879}
-  - component: {fileID: 8896166165819557399}
-  - component: {fileID: 6678292662300521380}
-  - component: {fileID: 6678292662300521433}
-  - component: {fileID: 7818543205041712865}
+  - component: {fileID: 9134053286445695917}
+  - component: {fileID: 601387314181791851}
+  - component: {fileID: 8288819124880585742}
+  - component: {fileID: 8779359105373425800}
+  - component: {fileID: 8779359105373425805}
   m_Layer: 0
-  m_Name: "\xC7arp\u0131"
+  m_Name: Ciftyon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8253042380281893528
+--- !u!4 &9134053286445695917
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
+  m_GameObject: {fileID: 1305081955594085379}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 29.949615, y: 0.7175991, z: 159.61844}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &3719358158451516879
+--- !u!33 &601387314181791851
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
-  m_Mesh: {fileID: 3233380513045097293, guid: 455960d6c8e631e49bbad6605d138bd6, type: 3}
---- !u!23 &8896166165819557399
+  m_GameObject: {fileID: 1305081955594085379}
+  m_Mesh: {fileID: 5730526407228398820, guid: 455960d6c8e631e49bbad6605d138bd6, type: 3}
+--- !u!23 &8288819124880585742
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
+  m_GameObject: {fileID: 1305081955594085379}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,47 +81,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6678292662300521380
+--- !u!54 &8779359105373425800
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
+  m_GameObject: {fileID: 1305081955594085379}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &6678292662300521433
+  m_CollisionDetection: 2
+--- !u!65 &8779359105373425805
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
+  m_GameObject: {fileID: 1305081955594085379}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.64580107, y: 2.4489784, z: 0.11957127}
-  m_Center: {x: -0.0000007003546, y: 1.2142987, z: -0.026598059}
---- !u!114 &7818543205041712865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262937415067237310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd3b41139325e694aaf741e3d8bd76df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakable: {fileID: 1750388155190793194, guid: 4554b675c8aca9c4dbbe6ac0212656cc,
-    type: 3}
-  breakEnergy: 55000
+  m_Center: {x: 0, y: 1.2142987, z: -0.026598059}

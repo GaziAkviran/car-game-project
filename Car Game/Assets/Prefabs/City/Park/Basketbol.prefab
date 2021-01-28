@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 4871070226305727954}
   - component: {fileID: 1752287400487095267}
   - component: {fileID: 4419309400367693520}
+  - component: {fileID: 5074550069143161250}
+  - component: {fileID: 8717516829636310667}
   m_Layer: 0
   m_Name: Basketbol
   m_TagString: Untagged
@@ -138,8 +140,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.18643475, y: 9.309914, z: 28.399336}
-  m_Center: {x: -7.5816817, y: 1.1914682, z: -12.5778265}
+  m_Size: {x: 0.18643475, y: 4.071089, z: 28.399336}
+  m_Center: {x: -7.5816817, y: 3.8108807, z: -12.5778265}
 --- !u!65 &4871070226305727954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,3 +181,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4428711, y: 4.3970804, z: 0.4854126}
   m_Center: {x: 0.0036315918, y: -1.2649484, z: -26.141968}
+--- !u!65 &5074550069143161250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605551464069625342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43136883, y: 5.2585564, z: 10.5673065}
+  m_Center: {x: -7.4592147, y: -0.8342104, z: -3.6618118}
+--- !u!65 &8717516829636310667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605551464069625342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43136883, y: 5.2585564, z: 7.8466644}
+  m_Center: {x: -7.4592147, y: -0.8342104, z: -22.93032}
