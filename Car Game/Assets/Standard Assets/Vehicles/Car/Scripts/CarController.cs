@@ -57,6 +57,8 @@ namespace UnityStandardAssets.Vehicles.Car
         public float AccelInput { get; private set; }
         public float KPH { get; set; }
 
+        public float kphSpeed;
+
         // Use this for initialization
         private void Start()
         {
@@ -71,9 +73,13 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+
         }
 
-
+        public void Update()
+        {
+            kphSpeed = m_Rigidbody.velocity.magnitude * 3.6f;
+        }
         private void GearChanging()
         {
             float f = Mathf.Abs(CurrentSpeed/MaxSpeed);
@@ -192,6 +198,7 @@ namespace UnityStandardAssets.Vehicles.Car
                         m_Rigidbody.velocity = (m_Topspeed/3.6f) * m_Rigidbody.velocity.normalized;
                     break;
             }
+
         }
 
 
