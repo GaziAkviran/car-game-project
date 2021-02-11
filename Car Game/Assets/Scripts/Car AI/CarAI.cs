@@ -6,116 +6,40 @@ using UnityEngine.Events;
 
 public class CarAI : MonoBehaviour
 {
-    [SerializeField]
-    private List<Vector3> path = null;
-    [SerializeField]
-    private float arriveDistance = .3f, lastPointArriveDistance = .1f;
-    [SerializeField]
-    private float turningAngleOffset = 5;
-    [SerializeField]
-    private Vector3 currentTargetPosition;
+    public float stopDistance = 2.5f;
+    public float rotationSpeed = 120f;
+    public float movementSpeed = 1f;
 
-    private int index = 0;
-    private bool stop;
-
-    public bool Stop
-    {
-        get { return stop; }
-        set { stop = value; }
-    }
-
-    [field: SerializeField]
-    public UnityEvent<Vector2> OnDrive { get; set; }
-
-    public UnityEvent Myevent { get; set; }
-    private void Start()
-    {
-        if (path == null || path.Count == 0)
-        {
-            Stop = true;
-        }
-        else
-        {
-            currentTargetPosition = path[index];
-        }
-    }
-
-
-    public void SetPath(List<Vector3> path)
-    {
-        if(path.Count == 0)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        this.path = path;
-        index = 0;
-        currentTargetPosition = this.path[index];
-
-        Vector3 relativepoint = transform.InverseTransformPoint(this.path[index + 1]);
-        float angle = Mathf.Atan2(relativepoint.x, relativepoint.z) * Mathf.Rad2Deg;
-
-        transform.rotation = Quaternion.Euler(0, angle, 0);
-        Stop = false;
-    }
+    public Vector3 destination;
+    public bool reachedDestination;
 
     private void Update()
     {
-        CheckIfArrived();
-        Drive();
-    }
-
-    private void Drive()
-    {
-        if(Stop)
+        if (transform.position != destination)
         {
-            OnDrive?.Invoke(Vector2.zero);
-        }
-        else
-        {
-            Vector3 relativepoint = transform.InverseTransformPoint(currentTargetPosition);
-            float angle = Mathf.Atan2(relativepoint.x, relativepoint.z) * Mathf.Rad2Deg;
-            var rotateCar = 0;
+            Vector3 destinationDirection = destination - transform.position;
+            destinationDirection.y = 0;
 
-            if(angle > turningAngleOffset)
-            {
-                rotateCar = 1;
-            }
-            else if (angle < -turningAngleOffset)
-            {
-                rotateCar = -1;
-            }
-            OnDrive?.Invoke(new Vector2(rotateCar, 1));
-        }
-    }
+            float destinationDistance = destinationDirection.magnitude;
 
-    private void CheckIfArrived()
-    {
-        if(Stop == false)
-        {
-            var distanceToCheck = arriveDistance;
-            if(index == path.Count - 1)
+            if (destinationDistance >= stopDistance)
             {
-                distanceToCheck = lastPointArriveDistance;
+                reachedDestination = false;
+                Quaternion targetRotation = Quaternion.LookRotation(destinationDirection);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+                transform.Translate(Vector3.forward * movementSpeed * Time.deltaTime);
             }
-            if(Vector3.Distance(currentTargetPosition, transform.position) < distanceToCheck)
+            else
             {
-                SetNextTargetIndex();
+                reachedDestination = true;
             }
         }
     }
 
-    private void SetNextTargetIndex()
+
+    public void SetDestination(Vector3 destination)
     {
-        index++;
-        if(index >= path.Count)
-        {
-            Stop = true;
-            Destroy(gameObject);
-        }
-        else
-        {
-            currentTargetPosition = path[index];
-        }
+        this.destination = destination;
+        reachedDestination = false;
     }
 }
