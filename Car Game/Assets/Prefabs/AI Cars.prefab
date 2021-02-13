@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8377822548860798043}
-  - component: {fileID: 8377822548860798042}
   - component: {fileID: 3311346340045396015}
   - component: {fileID: 4297060577962738640}
   - component: {fileID: -3275688512747230156}
@@ -34,20 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8377822548860798042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377822548860798045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d738880e9d9ae489abb6408e254643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carPrefabs:
-  - {fileID: 1703958165016714567, guid: 181a8a6d1c015124a83044d1d21611d9, type: 3}
 --- !u!54 &3311346340045396015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -92,23 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3a91d917da37044a265bbf5613d0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: []
-  arriveDistance: 0.3
-  lastPointArriveDistance: 0.1
-  turningAngleOffset: 5
-  currentTargetPosition: {x: 0, y: 0, z: 0}
-  <OnDrive>k__BackingField:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4297060577962738640}
-        m_TargetAssemblyTypeName: CarControllerAI, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  stopDistance: 2.5
+  rotationSpeed: 120
+  movementSpeed: 1
+  destination: {x: 0, y: 0, z: 0}
+  reachedDestination: 0
